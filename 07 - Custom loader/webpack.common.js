@@ -2,7 +2,7 @@ const HTMLPlugin = require('html-webpack-plugin');
 const path = require('path');
 
 module.exports = (mode = 'production') => ({
-    mode,
+  mode,
   entry: "./src/index.js",
   module: {
     rules: [
@@ -10,6 +10,10 @@ module.exports = (mode = 'production') => ({
         test: /\.js$/,
         exclude: /node_modules/,
         use: ["babel-loader"],
+      },
+      {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"],
       },
       {
         test: /\.(png|jpg)$/,
