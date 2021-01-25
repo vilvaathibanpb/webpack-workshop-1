@@ -1,0 +1,95 @@
+Module Graph:
+
+Main: 
+    index.js
+        sub.js
+        print.js
+    sub.js
+    print.js
+
+Add: 
+    add.js  
+        print.js
+    print.js
+
+
+Work stack:
+
+Entry point: index.js  -> transpile into module
+
+//////
+
+
+Chunk Graph
+
+Chunk main: 
+    index.js
+    sub.js
+    print.js
+
+Chunk add: 
+    add.js
+    print.js
+
+
+/////
+
+Optimize:
+
+Chunk main: 
+    available modules: []
+        index.js
+        sub.js
+        print.js
+
+Chunk add:
+    available modules: [index.js, sub.js, print.js]
+    add.js
+
+
+//////
+
+
+Generate Ids
+
+[0] Chunk main: 
+    available modules: []
+        index.js
+        sub.js
+        print.js
+
+[1] Chunk add:
+    available modules: [index.js, sub.js, print.js]
+    add.js
+
+Main: 
+    [0] index.js
+        sub.js
+        print.js
+    [1] sub.js
+    [2] print.js
+
+Add: 
+    [3] add.js  
+        print.js
+    [4] print.js
+
+////// 
+
+
+Replace imports with magic function and export to exports
+
+
+//////
+
+Build runtime
+
+
+/////
+
+Build assets (main.js)
+
+
+//////
+
+Check with HTML
