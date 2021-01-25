@@ -1,0 +1,19 @@
+{
+  "name": "zero-config",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "debug": "node --inspect-brk ./dist/main.js",
+    "debug-wp": "node --inspect-brk ./node_modules/webpack/bin/webpack.js",
+    "dev": "webpack -- --mode=development --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.17.0",
+    "webpack-cli": "^4.4.0"
+  }
+}
