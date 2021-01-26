@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://basic-react/./src/App.css"],"names":[],"mappings":"AAAA;IACI,YAAY;AAChB,C","file":"main.css","sourcesContent":["h1 {\n    color: green;\n}"],"sourceRoot":""}
